@@ -1,0 +1,82 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fff9c4);
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.lamp-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.lamp {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lamp:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.lamp h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.lamp-img {
+  width: 90px;
+  height: 90px;
+  transition: all 0.4s ease;
+}
+
+.status {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #666;
+}
+
+button {
+  background-color: #ffb300;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff9800;
+  transform: scale(1.05);
+}
+
+/* Efek saat lampu menyala */
+.lamp.on {
+  background: #fffde7;
+  box-shadow: 0 0 25px 8px rgba(255, 230, 0, 0.5);
+}
+
+.lamp.on .lamp-img {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+
+.lamp.on .status {
+  color: #fdd835;
+}
